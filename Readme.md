@@ -111,6 +111,25 @@ REDIRECT_URI=<Your OAuth Redirect URI>
 REFRESH_TOKEN=<Your OAuth Refresh Token>
 ACCESS_TOKEN=<Your OAuth Access Token>
 ```
+## Initial Setup
+
+For quick testing and initial setup, you can use the following predefined **admin user** credentials:
+
+- **Email:** subbhadipp26@gmail.com
+- **Password:** 1234
+
+This admin account can be used to log in and manage the system, including creating new municipal users.
+
+---
+
+### Important Notes:
+- **No Form Validation:**  
+  For the sake of time, form validation has not been implemented in this project. Make sure to input correct values while testing or expanding the system.
+  
+- **Using Predefined Admin Credentials:**  
+  After logging in with the above admin credentials, you can create municipal users and manage other parts of the system. The credentials for any users you create will be sent to their registered email address.
+
+If you wish to use a different admin account, you can modify the `seedAdmin.js` file as mentioned in the previous section.
 
 ---
 *Note - I am using free service to deploy so it may be slow and the email sending feature is only valid for 7days because of google auth free trial 
