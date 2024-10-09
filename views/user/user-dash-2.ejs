@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="/css/user-dash.css">
+   
+</head>
+
+<body>
+    
+    <div class="header">
+        <div class="logo">
+            
+            <h1>Public User Dashbord
+            </h1>
+            <br>
+            <h2><%=public_user.name%></h2>
+        </div>
+        <div class="user-info">
+            <p id="welcome-message"></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Role:<%=public_user.role%></a></li>
+
+                <li><a href="#">Address:<%=public_user.address%></a></li>
+             
+                <li><a href="#" id="sign-out">Sign out</a></li>
+            </ul>
+        </div>
+
+       
+    </div>
+
+    
+</body>
+<script src="/js/user-dash.js"></script>
+</html>
