@@ -3,7 +3,9 @@
 This is a JWT-based authentication system with refresh tokens, password hashing using bcrypt, and OTP validation for login and sensitive actions. It includes role-based access control for different user types and a minimalistic frontend for user authentication.
 
 ### Online Deployed Link:
+[Auth System](https://auth-sys-iota.vercel.app/api/auth/login)
 [Auth System](https://auth-sys-q2o6.onrender.com/api/auth/login)
+
 
 ## Features
 - **JWT Authentication:** Secure user sessions with JWTs (access and refresh tokens).
