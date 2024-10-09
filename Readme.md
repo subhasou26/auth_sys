@@ -10,6 +10,31 @@ This is a JWT-based authentication system with refresh tokens, password hashing 
 - **Password Hashing:** Passwords are hashed using bcrypt for additional security.
 - **OTP Validation:** OTP is generated and validated for login and sensitive actions with expiry times and secure storage.
 - **Roles & Permissions:** Different user types have specific roles and permissions.
+---
+## User Roles & Permissions
+
+This project supports three types of users:
+1. **Admin User:** Admin users have the highest level of access. They can create other users such as municipal users.
+2. **Municipal User:** These users are created by admin users and are assigned specific permissions to handle municipal-related tasks.
+3. **Public User:** Public users can register themselves and access public features of the system.
+
+### Admin-Created Users
+- Admin users have the ability to create **Municipal Users** via the `/api/admin/create-user` API.
+- When a user is created by the admin, their credentials (email and a temporary password) are automatically sent to their registered email address.
+  
+### Public Registration
+- **Public Users** can sign up on their own through the `/api/auth/register` endpoint.
+
+---
+
+## Seeding the Admin User
+
+To load the initial admin user into the system, follow these steps:
+1. Open the `seedAdmin.js` file located in the root directory.
+2. Change the admin email and password as per your preference.
+3. Run the file to seed the admin user into the database:
+   ```bash
+   node seedAdmin.js
 
 
 ---
