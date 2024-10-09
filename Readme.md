@@ -133,4 +133,23 @@ If you wish to use a different admin account, you can modify the `seedAdmin.js` 
 
 ---
 *Note - I am using free service to deploy so it may be slow and the email sending feature is only valid for 7days because of google auth free trial 
+---
+## Screenshots
+### 1. Login Page
+![image](https://github.com/user-attachments/assets/0e670f7e-d145-4718-adc0-c339f6d7acb3)
+
+### 2. Dashboard
+![image](https://github.com/user-attachments/assets/2b47056b-5e7c-4322-88b4-4ce6906a83b8)
+
+### 3. JWT Tokens Example
+![image](https://github.com/user-attachments/assets/ba08d1b4-7d4c-4f0b-9ca4-1d108084bf80)
+
+### 4. Create User by Admin
+![image](https://github.com/user-attachments/assets/d63d7778-8561-4f58-98b1-f415bca9fbe5)
+
+### 5. Forgot Password
+
+
+
+
 
