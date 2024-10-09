@@ -1,7 +1,7 @@
 // seedAdmin.js
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
-const User = require('./models/user'); // Make sure this path is correct based on your structure
+const User = require('./models/user'); 
 require('dotenv').config();
 
 // Connect to the database
@@ -28,10 +28,10 @@ let address={
   zipcode:"721134"
 }
     // Create new admin user
-    const hashedPassword = await bcrypt.hash('1234', 10); // Change 'admin_password' to your desired password
+    const hashedPassword = await bcrypt.hash('1234', 10); // Change '1234' to your desired password
     admin = new User({
-      name: 'Subhadip Paul',
-      email: 'kolabong27@gmail.com',
+      name: 'Your Name',
+      email: 'email@gmail.com',
       password: hashedPassword,
       role: 'admin',
       address:address
