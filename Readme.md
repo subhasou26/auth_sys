@@ -112,3 +112,6 @@ REFRESH_TOKEN=<Your OAuth Refresh Token>
 ACCESS_TOKEN=<Your OAuth Access Token>
 
 
+---
+*Note - I am using free service to deploy so it may be slow and the email sending feature is only valid for 7days because of google auth free trial 
+
