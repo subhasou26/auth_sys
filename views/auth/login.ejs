@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
-    <link rel="stylesheet" href="/css/login.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/css/login.css" />
+  </head>
+  <body>
     <div class="container">
-        <header>
-            
-            <h1>Login Page</h1>
-            <p>Welcome</p>
-        </header>
-        
-        <div class="form-container">
-            <h2>USER LOGIN</h2>
-            <form action="/api/auth/login" method="post" id="login-form">
-                <label for="e-mail">E-mail</label>
-                <input type="email" id="e-mail" name="email" required>
+      <header>
+        <h1>Login Page</h1>
+        <p>Welcome</p>
+      </header>
 
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+      <div class="form-container">
+        <h2>USER LOGIN</h2>
+        <form action="/api/auth/login" method="post" id="login-form">
+          <label for="e-mail">E-mail</label>
+          <input type="email" id="e-mail" name="email" required />
 
-                <button type="submit">Login</button>
-            </form>
-            <form action="/api/auth/forgot-password" method="GET">
-              <button type="submit"> Forgot Password</button>
-            </form>
-            <a href="http://localhost:5000/api/auth/register">Signup</a>
-        </div>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+
+          <button type="submit">Login</button>
+        </form>
+        <form action="/api/auth/forgot-password" method="GET">
+          <button type="submit">Forgot Password</button>
+        </form>
+        <a href="#" id="signup">Signup</a>
+      </div>
     </div>
-   
-</body>
-
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document
+          .getElementById("signup")
+          .addEventListener("click", function () {
+            
+            window.location.href = "api/auth/register";
+          });
+      });
+    </script>
+  </body>
 </html>
