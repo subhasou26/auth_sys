@@ -148,6 +148,8 @@ If you wish to use a different admin account, you can modify the `seedAdmin.js` 
 ![image](https://github.com/user-attachments/assets/d63d7778-8561-4f58-98b1-f415bca9fbe5)
 
 ### 5. Forgot Password
+![image](https://github.com/user-attachments/assets/ce44b758-a81a-4d2b-8b84-22472b098826)
+
 
 
 
