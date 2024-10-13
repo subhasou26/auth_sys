@@ -59,7 +59,7 @@ const renewToken = (req, res) => {
             const accessToken = jwt.sign(
               { id: decoded._id, role: decoded.role },
               process.env.JWT_SECRET,
-              { expiresIn: "1m" }
+              { expiresIn: "1h" }
             );
           req.user = decoded;
 
