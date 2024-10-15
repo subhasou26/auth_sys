@@ -1,6 +1,6 @@
 // models/User.js
 const mongoose = require('mongoose');
-
+const {isEmail}=require('validator');
 const UserSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -8,12 +8,15 @@ const UserSchema = new mongoose.Schema({
   },
   email: {
     type: String,
-    required: true,
+    required: [true,"Please enter a emaill"],
     unique: true,
+    lowercase:true,
+    validate:[isEmail,"please enter valid email"]
   },
   password: {
     type: String,
-    required: true,
+    required: [true,"Please enter an password"],
+    minlength:[6,'Minimum password length is 6']
   },
   role: {
     type: String,

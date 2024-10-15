@@ -1,6 +1,5 @@
 // middleware/auth.js
 const jwt = require("jsonwebtoken");
-const User = require("../models/user");
 
 
 require("dotenv").config();
@@ -52,7 +51,7 @@ const renewToken = (req, res) => {
   if(!refreshtoken) {
       return res.json({valid: false, message: "No Refresh token"})
   } else {
-      jwt.verify(refreshtoken,process.env.JWT_SECRET, (err ,decoded) => {
+      jwt.verify(refreshtoken,process.env.JWT_REFRESH_TOKEN, (err ,decoded) => {
           if(err) {
               return res.json({valid: false, message: "Invalid Refresh Token"})
           } else {

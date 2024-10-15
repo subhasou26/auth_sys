@@ -28,13 +28,14 @@ router.post("/register", async (req, res) => { // oposite browser -> server
       name,
       email,
       password: await bcrypt.hash(password, 10),
-      role: "public",
+      role: "public", 
       address:address,
     });
 
     await user.save();
     res.status(201).json({ msg: "User registered successfully" });
   } catch (err) {
+    console.log(err);
     res.status(500).json({ msg: "Server error" });
   }
 });
@@ -60,7 +61,7 @@ router.post("/login", async (req, res) => {
     );
     const refreshToken = jwt.sign(
       { id: login_user._id, role: login_user.role },
-      process.env.JWT_SECRET,
+      process.env.JWT_REFRESH_TOKEN,
       { expiresIn: "5h" }
     );
     res.cookie('accessToken', accessToken, {maxAge: 1 * 60 * 60 * 1000})
