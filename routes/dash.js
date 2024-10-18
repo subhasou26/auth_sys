@@ -3,8 +3,7 @@ const { auth, adminAuth ,municipal,public} = require("../middleware/auth");
 const router = express.Router();
 const User=require("../models/user");
 
-router.get("/admin", [auth, adminAuth],async(req,res)=>{
-   
+router.get("/admin", [auth, adminAuth],async(req,res)=>{  
     const id=req.user.id;
     const admin_user=await User.findById(id);
     res.render('admin/admin-dash.ejs',{admin_user});
