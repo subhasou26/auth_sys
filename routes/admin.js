@@ -41,12 +41,17 @@ router.post("/create-user", [auth, adminAuth], async (req, res) => {
       text: `Hi ${name},\n\nYour account has been created with the following credentials:\n\nUsername: ${email}\nPassword: ${password}\n\nPlease log in and change your password after first use.\n\nRegards,\nAdmin Team`,
     };
     sendMail(mailOptions)
-      .then((result) => console.log("Email send..."))
-      .catch((error) => console.log(error));
+      .then((result) => {
+        res
+        .status(201)
+        .json({ msg: "User created and credentials sent via email" });
+      })
+      .catch((error) => {
+        console.log(error);
+        res.status(500).json({msg:'error sending email otp'});  
+      });
 
-    res
-      .status(201)
-      .json({ msg: "User created and credentials sent via email" });
+  
   } catch (err) {
     res.status(500).json({ msg:"server error" });
   }
